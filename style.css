@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    height: 100vh;
+    padding: 1rem 5rem;
+    overflow-x: hidden;
+}
+p{
+    font-family: 'Barlow', sans-serif;
+    color: hsl(231, 7%, 65%);
+}
+h1{
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 3.8rem;
+}
+span{
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-right: 1rem;
+    background-color: black;
+    border-radius: 15px;
+    padding: 0.1rem 0.4rem;
+    font-weight: 700;
+    color: hsl(207, 33%, 95%);
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.wrapper .right{
+    position: relative;
+}
+.wrapper .right .box{
+    height: 350px;
+    width: 130%;
+    background-color: hsl(207, 33%, 95%);
+    top: -40%;
+    left: 0;
+    z-index: -9;
+    position: absolute;
+    border-bottom-left-radius: 80px;
+}
+.content{
+    color: hsl(230, 11%, 40%);
+    font-size: 1.3rem;
+}
+.bottom-show{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    padding: 1rem 1.5rem;
+    background-color: hsl(0, 100%, 68%);
+    text-decoration: none;
+    color: hsl(207, 33%, 95%);
+    font-weight: 700;
+    border-radius: 5px;
+    margin-right: 0.4rem;
+}
+
+/* mobile menu */
+.mobile{
+    position: relative;
+    display: none;
+}
+#checkbox_id{
+    display: none;
+}
+#checkbox_id:checked + .mobile-menu{
+    transform: translateY(-200px);
+}
+.mobile-menu{
+    position: absolute;
+    transform: translateX(-500px);
+    display: none;
+}
+.card{
+    width: 500px;
+    display: grid;
+    place-items: center;
+    background-color: gray;
+}
+.menu{
+    padding: 1.5rem;
+    list-style: none;
+    text-align: center;
+}
+.menu-d{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    font-weight: 700;
+}
+.menu-d li:nth-child(2){
+    padding: 0 1rem;
+}
+.menu-d li:nth-child(3){
+    padding-right:  3rem;
+}
+.menu-d li:nth-child(4) a{
+    color: hsl(231, 7%, 65%);
+}
+.menu a, .card a, .menu-d a{
+    text-decoration: none;
+    color: black;
+}
+/* mobile menu */
