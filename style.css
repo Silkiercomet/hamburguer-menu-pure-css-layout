@@ -69,6 +69,9 @@ span{
     display: flex;
     align-items: center;
 }
+.bottom-show p{
+    font-weight: 400;
+}
 .btn{
     padding: 1rem 1.5rem;
     background-color: hsl(0, 100%, 68%);
@@ -76,7 +79,11 @@ span{
     color: hsl(207, 33%, 95%);
     font-weight: 700;
     border-radius: 5px;
-    margin-right: 0.4rem;
+    margin-right: 0.6rem;
+    transition: 400ms;
+}
+.btn:hover{
+    opacity: 0.7;
 }
 
 /* mobile menu */
@@ -88,18 +95,24 @@ span{
     display: none;
 }
 #checkbox_id:checked + .mobile-menu{
-    transform: translateY(-200px);
+    transform: translate(-50%, -35%);
+    
 }
 .mobile-menu{
     position: absolute;
-    transform: translateX(-500px);
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-600px);
     display: none;
+    z-index: 99;
+    transition: 600ms;
 }
 .card{
-    width: 500px;
+    width: 400px;
     display: grid;
     place-items: center;
-    background-color: gray;
+    background-color: white;
 }
 .menu{
     padding: 1.5rem;
@@ -121,8 +134,76 @@ span{
 .menu-d li:nth-child(4) a{
     color: hsl(231, 7%, 65%);
 }
+.menu-d li a:hover{
+    text-decoration: underline;
+}
 .menu a, .card a, .menu-d a{
     text-decoration: none;
     color: black;
+    text-transform: uppercase;
 }
 /* mobile menu */
+
+/* media queries */
+
+@media (max-width:923px){
+    body{
+        padding: 1rem 2rem;
+    }
+    .menu-d{
+        display: none;
+    }
+    .mobile,.mobile-menu{
+        display: block;
+    }
+    .wrapper{
+        grid-template-columns: 100%;
+        grid-auto-flow: dense;
+        margin: 1.5rem 0;
+    }
+
+    .wrapper .right{
+        grid-row: 1;
+        width: 100%;
+        margin: 3rem 0;
+        position: relative;
+    }
+    .wrapper .left{
+        width: 100%;
+        margin-bottom: 3rem 0;
+        text-align: start;
+    }
+    .wrapper .right img{
+        width: 120%;
+    }
+    .wrapper .right .box{
+        transform: translateX(250px);
+        height: 450px;
+        top: -55%;
+    }
+    .bottom-show{
+        justify-content: flex-start;
+        margin-bottom: 3rem;
+    }
+    .menu li:nth-child(2){
+        padding: 1rem 0;
+    }
+    .menu li{
+        font-weight: 700;
+    }
+    .card{
+        padding: 1rem 0;
+        box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.23);
+    }
+    .login{
+        border-top: 1px solid hsl(231, 7%, 65%);
+        width: 80%;
+        text-align: center;
+        padding-top: 1rem;
+        font-weight: 700;
+        color: hsl(231, 7%, 65%);
+    }
+    
+}
+
+/* media queries */
